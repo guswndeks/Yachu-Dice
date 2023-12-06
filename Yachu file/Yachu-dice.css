@@ -1,0 +1,14 @@
+#dice_rolled {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 1000px;
+    height: 100px;
+}
+#dice_selected {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 1000px;
+    height: 100px;
+}

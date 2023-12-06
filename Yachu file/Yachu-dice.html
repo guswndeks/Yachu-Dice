@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Yacht Dice</title>
+    <link rel="stylesheet" href="Yachu-dice.css">
+    <script src = "Yachu-dice.js"></script>
+</head>
+<body>
+    <div id="dice_rolled">
+        <img id = "r0" sytle="display:none" onclick="diceSelect(this.id)">
+        <img id = "r1" sytle="display:none" onclick="diceSelect(this.id)">
+        <img id = "r2" sytle="display:none" onclick="diceSelect(this.id)">
+        <img id = "r3" sytle="display:none" onclick="diceSelect(this.id)">
+        <img id = "r4" sytle="display:none" onclick="diceSelect(this.id)">
+    </div>
+    
+    <p> <input type="button" id="throw_dice" onclick="rollDice()"> </p>
+
+    <div id="dice_selected">
+        <img id = "s0" sytle="display:none" onclick="diceUnSelect(this.id)">
+        <img id = "s1" sytle="display:none" onclick="diceUnSelect(this.id)">
+        <img id = "s2" sytle="display:none" onclick="diceUnSelect(this.id)">
+        <img id = "s3" sytle="display:none" onclick="diceUnSelect(this.id)">
+        <img id = "s4" sytle="display:none" onclick="diceUnSelect(this.id)">
+    </div>
+
+    <table id = "scoreboard" border="2">
+        <tr>
+            <td colspan="2">Yacht Dice</td>
+            <td id = "b0">User</td>
+        </tr>
+        <tr>
+            <td colspan="2">Aces</td>
+            <td id = "b1" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Deuces</td>
+            <td id = "b2" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Threes</td>
+            <td id = "b3" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Fours</td>
+            <td id = "b4" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Fives</td>
+            <td id = "b5" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Sixes</td>
+            <td id = "b6" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Mission</b></td>
+            <td id = "b7" style="color:black">0/63</td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Bonus</b></td>
+            <td id = "b8" style="color:black">0</td>
+        </tr>
+        <tr>
+            <td colspan="2">Chance</td>
+            <td id = "b9" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Four of a kind</td>
+            <td id = "b10" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Full House</td>
+            <td id = "b11" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Small Straight</td>
+            <td id = "b12" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Large Straight</td>
+            <td id = "b13" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Yacht</td>
+            <td id = "b14" onclick="addScore(this.id)"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><b>Total Score</b></td>
+            <td id = "b15" style="color:black">0</td>
+        </tr>
+    </table>
+
+    
+    <p> <input type="button" id="restart_button" onclick="restartGame()" value="재시작"> </p>
+    
+</body>
+</html>
